@@ -6,7 +6,10 @@ import java.util.concurrent.Executors;
 
 import org.team4213.lib14.CowCamController;
 import org.team4213.lib14.CowCamServer;
-
+import org.usfirst.frc.team4213.robot.RobotMap.Drivetrain;
+import org.usfirst.frc.team4213.robot.RobotMap.Intake;
+import org.usfirst.frc.team4213.robot.RobotMap.Shooter;
+import org.usfirst.frc.team4213.robot.RobotMap.Turret;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 
@@ -84,7 +87,11 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void teleopPeriodic() {
-
+		if (RobotMap.MANUAL_MODE) {
+			manualControl();
+		} else {
+			assistedControl();
+		}
 	}
 
 	/**
@@ -93,6 +100,14 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void testPeriodic() {
 
+	}
+
+	public void manualControl() {
+		// Insert Manual Control Code Here.
+	}
+
+	public void assistedControl() {
+		// Insert Assisted Control Code Here
 	}
 
 }
