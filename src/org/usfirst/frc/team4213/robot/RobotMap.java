@@ -2,9 +2,11 @@ package org.usfirst.frc.team4213.robot;
 
 public final class RobotMap {
 
+	public static final boolean MANUAL_MODE = true;
+
 	public final class Drivetrain {
-		public static final int LEFT_MOTOR = 1;
-		public static final int RIGHT_MOTOR = 0;
+		public static final int LEFT_MOTOR = 8;
+		public static final int RIGHT_MOTOR = 9;
 		public static final double SPRINT_SPEED = 1;
 		public static final double NORMAL_SPEED = 0.6;
 		public static final double CRAWL_SPEED = 0.4;
